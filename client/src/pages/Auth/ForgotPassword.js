@@ -15,15 +15,15 @@ const ForgotPassword = () => {
     e.preventDefault();
     
     try {
-      const config = {
-        headers: {
-          "Access-Control-Allow-Origin": '*',
-        },
-      };
+      // const config = {
+      //   headers: {
+      //     "Access-Control-Allow-Origin": '*',
+      //   },
+      // };
       const res = await axios.post(
         `${process.env.REACT_APP_API}/api/v1/auth/forgot-password`,
         { email, newPassword, answer },
-        config
+        // config
       );
       if (res && res.data.success) {
         toast.success(res.data && res.data.message);
