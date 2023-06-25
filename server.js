@@ -34,7 +34,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
     // origin: process.env.NODE_APP_API,
-    origin: "https://production-e-commerce-esh7.vercel.app",
+    origin: "*",
     credentials: true,
   })
 );
