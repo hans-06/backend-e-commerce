@@ -15,7 +15,11 @@ const ForgotPassword = () => {
     e.preventDefault();
     
     try {
-      const config = {headers: {"Access-Control-Allow-Origin": '*'}}
+      const config = {
+        headers: {
+          "Access-Control-Allow-Origin": `${process.env.REACT_APP_API}`,
+        },
+      };
       const res = await axios.post(
         `${process.env.REACT_APP_API}/api/v1/auth/forgot-password`,
         { email, newPassword, answer },
