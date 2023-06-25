@@ -35,13 +35,11 @@ app.use(
     // origin: process.env.NODE_APP_API,
     // origin: "*",
     // credentials: true,
-    headers: {
-      "Access-Control-Allow-Origin": `${process.env.NODE_APP_API}`,
-      "Access-Control-Allow-Methods": "POST, PUT, PATCH, GET, DELETE, OPTIONS",
-      "Access- Control - Allow - Headers":
-      "Origin, X - Api - Key, X - Requested - With, Content - Type, Accept, Authorization",
-      "Access-Control-Allow-Credentials": true
-    },
+    "Access-Control-Allow-Origin": "http://localhost:3000",
+    "Access-Control-Allow-Methods": "POST, PUT, PATCH, GET, DELETE, OPTIONS",
+    "Access-Control-Allow-Headers":
+      "Origin, X-Api-Key, X-Requested-With, Content-Type, Accept, Authorization",
+    "Access-Control-Allow-Credentials": true,
   })
 );
 app.use(express.json());
