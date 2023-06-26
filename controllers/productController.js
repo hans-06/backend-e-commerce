@@ -383,7 +383,10 @@ export const paymentVerificationController = async (req, res) => {
       }).save();
       res.clearCookie("cart");
       res.redirect(`${process.env.NODE_APP_API}/dashboard/user/orders`);
-    } 
+    }else {
+      res.status(400).json({
+        success: false,
+      });
     }
   } catch (error) {
     console.log(error);
